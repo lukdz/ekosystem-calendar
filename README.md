@@ -29,27 +29,30 @@ You need to populate a list of addresses.
 ### Step 3: Add the GitHub Secret
 1. Go to your forked repository on GitHub.
 2. Navigate to **Settings** > **Secrets and variables** > **Actions**.
-3. Click **Repository variables**.
+3. Click **New repository secret**.
 4. Set the Name to `LOCATIONS_JSON`.
-5. Open your locally generated `locations.json` file, copy all of its contents, and paste it into the value box. Click Add.
+5. Open your locally generated `locations.json` file, copy all of its contents, and paste it into the Secret value box. Click Add.
 
-### Step 4: Enable GitHub Pages & Actions
-1. Go to **Settings** > **Pages**.
-2. Under "Build and deployment", change the Source to **GitHub Actions**.
-3. Go to the **Actions** tab in your repository and click **"I understand my workflows, go ahead and enable them"**.
+### Step 4: Enable GitHub Actions
+1. Go to the **Actions** tab in your repository and click **"I understand my workflows, go ahead and enable them"**.
 
 ### Step 5: Run the Workflow
 1. Still in the **Actions** tab, select the **Generate Calendar** workflow on the left.
 2. Click the **Run workflow** dropdown on the right, and click **Run workflow**.
-3. Wait a minute or two for the action to finish and deploy your site to GitHub Pages.
+3. Wait a minute or two for the action to finish generating your calendars and pushing them to the `public` branch.
 
 ### Step 6: Subscribe to your Calendar!
 Find your specific calendar using the identifier assigned to you in Step 2.
 
-The URL will look like this:
-`https://<your-github-username>.github.io/<repository-name>/calendar_<your_identifier>.ics`
+To get your calendar subscription URL:
+1. Go to your repository homepage on GitHub.
+2. Switch the branch from `master` to `public` using the branch dropdown menu at the top left.
+3. Click on your specific calendar file (e.g., `calendar_a8f39c1b.ics`).
+4. Click the **Raw** button at the top right of the file view.
+5. Copy the URL from your browser's address bar. 
 
-*Example: `https://lukdz.github.io/ekosystem-calendar/calendar_a8f39c1b.ics`*
+It will look something like this:
+`https://raw.githubusercontent.com/<your-github-username>/<repository-name>/refs/heads/public/calendar_<your_identifier>.ics`
 
 Now, add this URL to your preferred calendar app as a "Subscribed Calendar". Because it is a subscription, it will automatically stay up-to-date as the GitHub Action runs every week!
 
@@ -59,11 +62,19 @@ Now, add this URL to your preferred calendar app as a "Subscribed Calendar". Bec
 3. Select **From URL**.
 4. Paste your calendar URL and click **Add calendar**. *(It will automatically sync to the Google Calendar app on your phone).*
 
+**Notifications:**
+* **The Default:** Google automatically blocks the `.ics` creator's reminders.
+* **Best Fix:** Go to Google Calendar on a web browser, open **Settings**, select the subscribed calendar under "Settings for other calendars," and manually add your own custom **Event notifications**.
+
 #### 🍏 Apple Calendar (iPhone/iPad)
 1. Open the **Settings** app on your device.
 2. Scroll down and tap **Calendar** > **Accounts** > **Add Account**.
 3. Tap **Other** > **Add Subscribed Calendar**.
 4. Paste your calendar URL, tap **Next**, and then **Save**.
+
+**Notifications:**
+* **The Default:** Apple silences the calendar creator's reminders by default.
+* **Best Fix:** Force Apple to use the original reminders. On iOS, go to *Settings > Calendar > Accounts > Subscribed Calendars*, select the calendar, and toggle off **Remove Alarms**.
 
 #### 🍏 Apple Calendar (Mac)
 1. Open the **Calendar** app.
@@ -71,11 +82,19 @@ Now, add this URL to your preferred calendar app as a "Subscribed Calendar". Bec
 3. Paste your calendar URL and click **Subscribe**.
 4. *Recommended:* Set the "Auto-refresh" option to **Every day**.
 
+**Notifications:**
+* **The Default:** Apple silences the calendar creator's reminders by default.
+* **Best Fix:** Right-click the calendar, click *Get Info*, and uncheck **Ignore alerts**.
+
 #### ✉️ Microsoft Outlook (Web)
 1. Open Outlook Calendar on the web.
 2. Click **Add calendar** in the left sidebar.
 3. Select **Subscribe from web**.
 4. Paste your calendar URL, give it a name, and click **Import**.
+
+**Notifications:**
+* **The Default:** Outlook strips out the creator's reminders and provides no way to add custom rules specifically for that subscription.
+* **Best Fix:** If you absolutely need reminders, don't use the URL subscription feature. Instead, **download the `.ics` file** and manually import it into Outlook (*File > Open & Export > Import/Export*). *Note: The calendar will no longer auto-update.*
 
 ---
 
