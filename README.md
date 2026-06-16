@@ -26,10 +26,10 @@ You need to populate a list of addresses.
    ```
    The script will print out a message like: `This location is assigned to key: a8f39c1b`. **Remember this identifier!** Your final calendar URL will be `calendar_a8f39c1b.ics`.
 
-### Step 3: Add the GitHub Variable
+### Step 3: Add the GitHub Secret
 1. Go to your forked repository on GitHub.
-2. Navigate to **Settings** > **Secrets and variables** > **Actions** > **Variables**.
-3. Click **New repository variable**.
+2. Navigate to **Settings** > **Secrets and variables** > **Actions**.
+3. Click **Repository variables**.
 4. Set the Name to `LOCATIONS_JSON`.
 5. Open your locally generated `locations.json` file, copy all of its contents, and paste it into the value box. Click Add.
 
