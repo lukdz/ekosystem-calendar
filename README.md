@@ -2,7 +2,7 @@
 
 This project automatically scrapes the garbage collection schedule from [Ekosystem Wrocław](https://ekosystem.wroc.pl/gospodarowanie-odpadami/harmonogram-wywozu-odpadow/) and generates subscribable `.ics` (iCalendar) files for your calendar apps (Google Calendar, Apple Calendar, Outlook, etc.).
 
-It is designed to run entirely via **GitHub Actions** and publish the calendars via **GitHub Pages**, completely free and fully automated.
+It is designed to run entirely via **GitHub Actions**, keeping your main branch clean by publishing the calendars to an isolated data branch. It's completely free and fully automated.
 
 ---
 
@@ -24,7 +24,7 @@ You need to populate a list of addresses.
    ```bash
    python add_location.py "https://ekosystem.wroc.pl/gospodarowanie-odpadami/harmonogram-wywozu-odpadow/?lokalizacja=27717&ulica=744"
    ```
-   The script will print out a message like: `This location is assigned to key: a8f39c1b`. **Remember this identifier!** Your final calendar URL will be `calendar_a8f39c1b.ics`.
+   The script will print out a message like: `This location is assigned to key: a8f39c1b`. **Remember this identifier!** Your final calendar URL will contain `calendar_a8f39c1b.ics`.
 
 ### Step 3: Add the GitHub Secret
 1. Go to your forked repository on GitHub.
