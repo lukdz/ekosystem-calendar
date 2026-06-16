@@ -24,7 +24,7 @@ jobs:
           
       - name: Generate iCal
         env:
-          LOCATIONS_JSON: ${{ secrets.LOCATIONS_JSON }}
+          LOCATIONS_JSON: ${{ vars.LOCATIONS_JSON }}
         run: |
           python generate_ical.py
         
