@@ -66,6 +66,35 @@ Now, add this URL to your preferred calendar app as a "Subscribed Calendar". Bec
 * **The Default:** Google automatically blocks the `.ics` creator's reminders.
 * **Best Fix:** Go to Google Calendar on a web browser, open **Settings**, select the subscribed calendar under "Settings for other calendars," and manually add your own custom **Event notifications**.
 
+**Syncing to Desktop Apps:**
+When you subscribe to an external `.ics` calendar via a URL, Google adds it to your web view under "Other Calendars," but **it does not automatically push that calendar to third-party apps** like Apple Calendar or Microsoft Outlook by default.
+
+To fix this, you have to enable synchronization for that specific calendar in a somewhat hidden Google settings menu.
+
+Here is how to force it to show up in your desktop apps:
+
+**1. Enable Sync for the Specific Calendar**
+1. Open your web browser and make sure you are logged into the Google Account that is connected to your Mac Calendar/Outlook.
+2. Go to this exact, hidden Google Calendar sync settings page: **[calendar.google.com/calendar/syncselect](https://calendar.google.com/calendar/syncselect)**
+3. Look under the **Shared Calendars** or **Other Calendars** section.
+4. Find the `.ics` calendar you just added and **check the box** next to it.
+5. Click **Save** in the bottom right corner.
+
+**2. Refresh Your Desktop App**
+Once you've told Google to actually broadcast the calendar, you need to prompt your desktop apps to fetch the new data.
+
+**For Mac Calendar (Apple Calendar):**
+* Open the Calendar app.
+* Press `Command + R` on your keyboard, or go to **View > Refresh Calendars** in the top menu bar.
+* *Note: It might take a minute or two for the new calendar to appear in your sidebar under your Google account.*
+
+**For Microsoft Outlook (Mac):**
+* Open Outlook and go to the Calendar view.
+* Go to the **Tools** tab at the top and click **Sync** (or click the Send/Receive button).
+* Alternatively, fully quit Outlook (`Command + Q`) and reopen it to force a fresh connection to Google's servers.
+
+Once you complete these steps, the `.ics` calendar should populate right alongside your primary Google Calendar events!
+
 #### 🍏 Apple Calendar (iPhone/iPad)
 1. Open the **Settings** app on your device.
 2. Scroll down and tap **Calendar** > **Accounts** > **Add Account**.
