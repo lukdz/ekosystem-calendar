@@ -66,6 +66,29 @@ Now, add this URL to your preferred calendar app as a "Subscribed Calendar". Bec
 * **The Default:** Google automatically blocks the `.ics` creator's reminders.
 * **Best Fix:** Go to Google Calendar on a web browser, open **Settings**, select the subscribed calendar under "Settings for other calendars," and manually add your own custom **Event notifications**.
 
+**Syncing to Android (Google Calendar App):**
+It is common for newly subscribed `.ics` calendars to be hidden and disabled by default on the mobile app, even after you've set them up on the web.
+
+Here is how to force the calendar to sync and display on your Android device:
+
+**1. Enable Sync in the App Settings**
+1. Open the **Google Calendar app** on your Android phone.
+2. Tap the **Menu** icon (three horizontal lines) in the top-left corner.
+3. Scroll all the way to the bottom and tap **Settings** (the gear icon).
+4. Find the Google Account where you added the `.ics` calendar.
+5. If you do not see the new calendar listed under that account, tap **Show more** to reveal hidden calendars.
+6. Tap the name of your newly added calendar.
+7. Toggle the **Sync** switch to the **On** position. (You may also want to change the color or notifications here).
+
+**2. Make the Calendar Visible**
+1. Tap the back arrow twice to return to the main calendar view.
+2. Tap the **Menu** icon (three horizontal lines) again.
+3. Scroll down to your Google Account.
+4. Locate the newly synced calendar and **tap the checkbox** next to it so it is filled in.
+5. To force an immediate update, tap **Refresh** (often located at the top of the menu or triggered by pulling down on the main calendar screen).
+
+*Note: Subscribed `.ics` calendars are updated by Google automatically, but they can sometimes take up to 24 hours to pull in changes made by the calendar owner.*
+
 **Syncing to Desktop Apps:**
 When you subscribe to an external `.ics` calendar via a URL, Google adds it to your web view under "Other Calendars," but **it does not automatically push that calendar to third-party apps** like Apple Calendar or Microsoft Outlook by default.
 
